@@ -1,3 +1,4 @@
+using dotnetcore.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace dotnetcore.Persistence
@@ -7,7 +8,7 @@ namespace dotnetcore.Persistence
         public VegaDbContext(DbContextOptions<VegaDbContext> options)
         :base(options)
         {
-            
         }
+        public DbSet<Make> Makes { get; set; }
     }
 }
